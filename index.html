@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
           <label for="autor">Autor:</label>
-          <input type="autor" id="autor" name="autor" required />
+          <input type="text" id="autor" name="autor" required />
         </div>
         <div class="form-group">
           <label for="genero">Gênero:</label>
@@ -66,14 +66,17 @@
 
         try {
           // Faz uma requisição para a sua API
-          await fetch("INSIRA O LINK DA SUA API AQUI", {
+          await fetch("https://meu-primeiro-bancos-de-dados.onrender.com/formulario", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(dados),
           });
+
+          alert("formulario enviado com sucesso ")
         } catch (error) {
+          alert(" Erro ao cadastrar formulario ")
           console.log(error);
         }
       }
